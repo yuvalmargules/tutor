@@ -28,15 +28,15 @@ If your school uses Moodle, Tutor can automatically check for updated HW grades 
 The dashboard shows the student's current grades and all courses [s]he is enrolled in. 
 ### 3. Course page
 From the main page, the user can choose a specific course to look at and see all data relevant to this specific course. 
-The user has the ability to sign up to courses, create courses (as a new DB), and to add/remove data from course (edit the DB).
+The user has the ability to sign up to courses, create courses, and to add/remove data from course.
 
 ## Backend
 
 Implemented with Flask and PostreSQL using the following components:
 
-1. DB for all courses available in the app
-2. DB for each course, filled with the data relevant for that specific app.
-3. User has the ability to add and remove courses, as well as add and remove data from each course's DB.
+1. Table for all courses available in the app
+2. Table for each course, filled with the data relevant for that specific app.
+3. User has the ability to add and remove courses, as well as add and remove data from each course's table.
 
 ## Frontend
 
@@ -53,7 +53,7 @@ TBD
 
 ## Issues and Dillemas
 
-1. Can we implement feature that gets grades from Moodle? (Privacy issue) If not, can add feature that user's add their grades manually.
+1. Can we implement feature that gets grades from Moodle (Privacy issue)? If not, can add feature that user's add their grades manually.
 
 # Getting Started
 
