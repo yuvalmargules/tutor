@@ -15,9 +15,24 @@ If your school uses Moodle, Tutor can automatically check for updated HW grades 
 
 # App Components
 
+<div align="center">
+
+![](static/img/diagram.png)
+
+</div>
+
+## Functionality
+
+### 1. User management - login screen
+### 2. Main page - Dashboard
+The dashboard shows the student's current grades and all courses [s]he is enrolled in. 
+### 3. Course page
+From the main page, the user can choose a specific course to look at and see all data relevant to this specific course. 
+The user has the ability to sign up to courses, create courses (as a new DB), and to add/remove data from course (edit the DB).
+
 ## Backend
 
-Implemented with Flask using the following components:
+Implemented with Flask and PostreSQL using the following components:
 
 1. DB for all courses available in the app
 2. DB for each course, filled with the data relevant for that specific app.
@@ -25,15 +40,7 @@ Implemented with Flask using the following components:
 
 ## Frontend
 
-Implemented with bootsrap using the following components:
-
-1. Login Screen
-
-2. Main Page - Dashboard
-User can see his current grades and all courses he is signed up for.
-
-3. Course Page
-User can see all data relevant to course he's currently in using a table format, divided into sub-categories.
+Implemented with bootstrap.
 
 ## Login System
 
@@ -89,6 +96,8 @@ These are the current libraries used:
 Python 3.7
 
 Flask 1.1.2 
+
+PostgreSQL 10.14
 
 # Our Team:
 
