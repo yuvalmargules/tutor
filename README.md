@@ -39,7 +39,7 @@ User can see all data relevant to course he's currently in using a table format,
 
 TBD
 
-## Testing
+## Testing and CI
 
 1. github actions
 2. pytest
