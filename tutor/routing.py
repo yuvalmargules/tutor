@@ -1,6 +1,6 @@
 from run import app
-from routes import hello
+from routes import home
 
 @app.route('/')
-def hello_route():
-    return hello.hello()
+def index_route():
+    return home.home()
