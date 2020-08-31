@@ -14,7 +14,8 @@ For example: 153_creating_login_page
 ## General Guidelines
 ### linter and coding style
 We will follow a set of coding style rules and use linter to keep the order.
-Recommended flake8 or pylint (need to choose).
+We will use both flake8 and pylint.
+
 
 ### routes and controllers
 We need to keep routes short, in intent to follow rest-api rules.
