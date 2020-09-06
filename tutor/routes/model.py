@@ -8,7 +8,7 @@ def models_route():
 
 
 # example of a route with different methods
-# example to return a json 
+# This method create a new model object, and return a JSON with its details
 @app.route('/model/store', methods=['GET', 'POST'])
 def store_book_route():
     return model.createNewModel(modelName='model')
