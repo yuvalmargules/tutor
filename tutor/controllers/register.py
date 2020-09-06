@@ -4,5 +4,5 @@ from .forms import RegistrationForm, LoginForm
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        return redirect(url_for('home'))
+        return redirect(url_for('index_route'))
     return render_template('register.html', form=form)
