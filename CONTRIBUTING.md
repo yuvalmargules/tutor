@@ -25,7 +25,7 @@ That way GET routes its for representing a view to the user, and POST routes its
 
 
 ### MVC design
-Models - we will add new models into 'tutor/models.py' file.
-Views - we will add new views into 'tutor/templates' folder. We will use a layout as a base for all our templates. 
-Controllers - we will add controllers into 'tutor/controllers' folder. 
-Routing - we will add new routes into 'tutor/routing.py' with a route function named '%desciption%_route'.
+Models - we will add new models into 'tutor/models folder, one file for a model. We must do `vagrant halt` and then `vagrant up --provision` to keep the migrations synchronized.
+Views - we will add new views into 'tutor/templates' folder, one file for a view. We will use a layout, `templates/base.html` as a base for all our templates. 
+Controllers - we will add controllers into 'tutor/controllers' folder, one file for a controller. When helper controllers are needed, write them on the specific controller. Keep controllers short and doing one thing, use helper functions to achieve that.
+Routing - we will add new routes into 'tutor/routes' folder, one file for a route. After that, we need to import the route on `run.py` file, using `from tutor.routes mport %YOUR_ROUTE_FILE_NAME%`.
