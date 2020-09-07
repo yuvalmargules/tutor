@@ -10,7 +10,7 @@
     <body style="background: url(../static/img/pexels-lukas-317356.jpg); background-size: cover">  
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: url(../static/img/pexels-lukas-317356.jpg); background-size: cover" >
-          <a href="{{ url_for('home') }}"><img src="../static/img/logo.jpeg" width=82 height=42></a>
+          <a href="{{ url_for('index_route') }}"><img src="../static/img/logo.jpeg" width=82 height=42></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,10 +22,10 @@
                 </li>
               </ul>
               <div class="my-2 my-lg-0">
-                <a class="nav-link border" style="background-color: white" href="{{ url_for('register') }}">Sign up</a>
+                <a class="nav-link border" style="background-color: white" href="{{ url_for('register_route') }}">Sign up</a>
               </div>
               <div class="my-2 my-lg-0">
-                <a class="nav-link border" style="background-color: white" href="{{ url_for('login') }}">Log in</a>
+                <a class="nav-link border" style="background-color: white" href="{{ url_for('login_route') }}">Log in</a>
               </div>
             </div>
           </nav>
