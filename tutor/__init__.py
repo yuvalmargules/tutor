@@ -1,5 +1,5 @@
 from flask import Flask  
-from tutor.config import *
+from tutor.config import DevelopmentConfig
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 
