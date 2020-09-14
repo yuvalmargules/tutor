@@ -20,3 +20,8 @@ class LoginForm(FlaskForm):
                 validators=[DataRequired()])
     remember = BooleanField('Remeber Me')
     submit = SubmitField('Login')
+
+class AddCourse(FlaskForm):
+    title = StringField('Course Name', validators=[DataRequired(), Length(max=50)])
+    submit = SubmitField('Add Course')
+
