@@ -1,5 +1,6 @@
 from flask import render_template
-
+from flask import Flask, Response, render_template, request, redirect, url_for
+from .forms import resourceForm
 
 # TODO: need to be handled by backend
 def getCourseResources(id):
@@ -22,3 +23,9 @@ def showCoursePage(id):
         {'id': 3, 'name': 'resource3', 'description': 'blala3', 'link': 'https://google.com'},
     ]
     return render_template('course.html', name=name, resources=resources)
+
+def newResource():
+    form = resourceForm()
+    if form.validate_on_submit():
+        return redirect(url_for('index_route'))
+    return render_template('resource.html', form=form)
