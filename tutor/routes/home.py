@@ -12,7 +12,6 @@ def index_route():
 def register_route():
     return register.register()
 
-
 @app.route("/login", methods=['GET', 'POST'])
 def login_route():
     return login.login()
