@@ -11,6 +11,16 @@ We also will create issues for discussions on things that will affect our app, l
 For example: 153_creating_login_page
 
 
+
+## Testing
+In order to use automatic tests, we will store all our tests on `/tests` folder. 
+
+We should call our test files with "test" before the description, like `test_whatYouWantToTest.py`. 
+Also the functions inside the test files should be called with "test" before the description, like `test_testFunctionName()`. That way `pytest` would know what files and function is our tests.
+
+To test out our tests, we should connect into the Box, `vagrant ssh`, go to the vagrant folder, `cd /vagrant` and then call `python3 -m pytest` to run the tests.
+
+
 ## General Guidelines
 ### linter and coding style
 We will follow a set of coding style rules and use linter to keep the order.
