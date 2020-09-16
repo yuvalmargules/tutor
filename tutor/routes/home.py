@@ -1,5 +1,5 @@
 from .. import app
-from ..controllers import home, register, login, course
+from ..controllers import home, register, login
 
 
 @app.route('/')
@@ -15,11 +15,3 @@ def register_route():
 @app.route("/login", methods=['GET', 'POST'])
 def login_route():
     return login.login()
-
-@app.route("/courses", methods=['GET', 'POST'])
-def courses_route():
-    return course.showCourses()
-
-@app.route("/addcourse", methods=['GET', 'POST'])
-def addCourse_route():
-    return course.addCourse()
