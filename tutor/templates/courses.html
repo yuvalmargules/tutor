@@ -5,11 +5,11 @@
 
 <h2>Courses</h2> <br>
 {% for course in courses %}
-<article class="media content-section">
+    <article class="media content-section">
     <div class="media-body">
         <h3><a class="article-title" href="#">{{ course.title }}</a></h3>
     </div>
-</article>
+    </article>
 {% endfor %}
 <a class="btn btn-outline-info" style="background-color: white" href="{{ url_for('addCourse_route') }}">Add Courses</a>
 <br>
