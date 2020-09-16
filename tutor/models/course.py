@@ -9,7 +9,6 @@ class Course(db.Model):
 
     def __init__(self, name):
         self.name = name
-        
 
 
 class Resource(db.Model):
@@ -24,6 +23,3 @@ class Resource(db.Model):
         self.title = title
         self.content = content
         self.course_id = course_id
-
-
-
