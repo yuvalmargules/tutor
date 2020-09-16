@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for
+from flask import Flask, Response, render_template, request, redirect, url_for
 from .forms import AddCourse
 
 
@@ -7,7 +7,6 @@ def addCourse():
     if form.validate_on_submit():
         return redirect(url_for('courses_route'))
     return render_template('addcourse.html', form=form)
-
 
 
 # TODO: need to be handled by backend
