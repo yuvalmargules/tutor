@@ -12,4 +12,3 @@ def newResource(id):
        db.session.commit() 
        return redirect(url_for('get_course_info_route', id=id))
     return render_template('resource.html', form=form)
-  
