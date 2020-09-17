@@ -1,5 +1,5 @@
 from .. import app
-from ..controllers import home, register, login, forms
+from ..controllers import home, register, login
 
 
 @app.route('/')
