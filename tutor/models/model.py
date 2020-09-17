@@ -39,4 +39,3 @@ class Model(db.Model):
     @staticmethod
     def getAllByName(name):
         return Model.query.filter_by(name=name).all()
-        
