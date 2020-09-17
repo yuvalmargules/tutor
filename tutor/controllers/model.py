@@ -10,6 +10,5 @@ def getAllModels():
 
 def createNewModel(modelName):
     modeling = model.Model(name=modelName)
-    db.session.add(modeling)
-    db.session.commit()
+    modeling.save()
     return jsonify({'id': modeling.id, 'status': 200})
