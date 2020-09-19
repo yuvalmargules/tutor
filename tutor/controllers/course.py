@@ -9,14 +9,16 @@ def addCourse():
         return redirect(url_for('courses_route'))
     return render_template('addcourse.html', form=form)
 
+
 def showCourses():
     # get courses from data base into a list
     courses = [
-        {'id': 1, 'title': 'Course 1' },
-        {'id': 2, 'title': 'Course 2' },
-        {'id': 3, 'title': 'Course 3' }
+        {'id': 1, 'title': 'Course 1'},
+        {'id': 2, 'title': 'Course 2'},
+        {'id': 3, 'title': 'Course 3'}
     ]
     return render_template('courses.html', courses=courses)
+
 
 def showCoursePage(id):
     course = Course.query.filter_by(id=id).first()

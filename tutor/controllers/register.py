@@ -1,6 +1,7 @@
 from flask import Flask, Response, render_template, request, redirect, url_for
 from .forms import RegistrationForm, LoginForm
 
+
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
