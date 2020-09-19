@@ -31,5 +31,6 @@ class AddCourse(FlaskForm):
 
 class resourceForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
-    content = TextAreaField('Content', validators=[DataRequired()])
+    content = TextAreaField('Description', validators=[DataRequired()])
+    link = TextAreaField('Link', validators=[DataRequired()])
     submit = SubmitField('Post')

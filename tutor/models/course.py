@@ -19,7 +19,8 @@ class Resource(db.Model):
     link = db.Column(db.Text)
     course_id = db.Column(db.Integer, db.ForeignKey('course.id'), nullable=False)
 
-    def __init__(self, title, content, course_id):
+    def __init__(self, title, content, link, course_id):
         self.title = title
         self.content = content
+        self.link = link
         self.course_id = course_id
