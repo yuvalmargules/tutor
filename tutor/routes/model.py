@@ -1,6 +1,7 @@
 from .. import app
 from ..controllers import model
 
+
 # example to get all models
 @app.route('/models')
 def models_route():

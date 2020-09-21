@@ -14,7 +14,7 @@ class RegistrationForm(FlaskForm):
                 validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Sign Up')
 
-    
+
 class LoginForm(FlaskForm):
     email = StringField('Email',
                 validators=[DataRequired()])
@@ -28,7 +28,7 @@ class AddCourse(FlaskForm):
     title = StringField('Course Name', validators=[DataRequired(), Length(max=50)])
     submit = SubmitField('Add Course')
 
-    
+
 class resourceForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])

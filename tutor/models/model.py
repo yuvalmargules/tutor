@@ -9,10 +9,10 @@ class Model(db.Model):
 
     def __init__(self, name):
         self.name = name
-    
+
     def serialize(self):
         return {
-            'id': self.id, 
+            'id': self.id,
             'name': self.name,
         }
         
