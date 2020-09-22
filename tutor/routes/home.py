@@ -18,6 +18,7 @@ def register_route():
 def login_route():
     return login.login()
 
+
 @app.route("/flash")
 def flash_route():
     flash('Test message', 'success')
