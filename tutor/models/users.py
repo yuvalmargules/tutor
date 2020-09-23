@@ -1,6 +1,7 @@
 from .. import db, bcrypt
 
 
+
 class Users(db.Model):
     __tablename__ = 'users'
 
