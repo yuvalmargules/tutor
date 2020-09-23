@@ -8,6 +8,7 @@ apt install -y python3.7 python3-pip python3.7-dev postgresql postgresql-contrib
 
 echo "installing dependencies"
 pip3 install pipenv
+export PIPENV_VENV_IN_PROJECT="enabled"
 cd /vagrant/ && pipenv sync --dev
 
 
