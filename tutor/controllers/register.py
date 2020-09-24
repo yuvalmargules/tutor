@@ -7,7 +7,7 @@ from .. import db, bcrypt
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        hashed_pass = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        hashed_pass = Users.hash_pass(form.password.data)
         user = Users(username=form.username.data, email=form.email.data, password=hashed_pass)
         db.session.add(user)
         db.session.commit()
