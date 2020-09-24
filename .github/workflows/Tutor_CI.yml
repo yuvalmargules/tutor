@@ -18,7 +18,6 @@ jobs:
         ./bootstrap.sh
     - name: Lint with flake8
       run: |
-        pipenv run flake8 . --count --select=W292,W293,E3,E9 --show-source --statistics --exclude=*venv* --extend-exclude=*migrations
         pipenv run flake8 . --count --max-complexity=10 --max-line-length=127 --statistics --exclude=*venv* --extend-exclude=*migrations*
     - name: Test with pytest
       run: |
