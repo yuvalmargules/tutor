@@ -19,6 +19,6 @@ def test_register_user():
         test_user = Users.query.first()
         assert test_user.username == 'test'
         assert test_user.email == 'test@email.com'
-        assert True == bcrypt.check_password_hash(test_user.password, '123')
+        assert bcrypt.check_password_hash(test_user.password, '123')
     Users.query.delete()
     db.session.commit()
