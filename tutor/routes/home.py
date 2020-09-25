@@ -24,6 +24,7 @@ def flash_route():
     flash('Test message', 'success')
     return home.home()
 
+
 @app.route("/logout")
 def logout_route():
     return logout.logout()
