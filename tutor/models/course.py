@@ -7,9 +7,6 @@ class Course(db.Model):
     name = db.Column(db.String(100), nullable=False)
     resources = db.relationship('Resource', backref='course', lazy=True)
 
-    def __init__(self, name):
-        self.name = name
-
 
 class Resource(db.Model):
     __tablename__ = 'resource'
@@ -17,7 +14,7 @@ class Resource(db.Model):
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.Text, nullable=False)
     link = db.Column(db.Text)
-    course_id = db.Column(db.Integer, db.ForeignKey('course.id'), nullable=False)
+    course_id = db.Column(db.Integer, db.ForeignKey('course.id'), nullable=True)
 
     def __init__(self, title, content, link, course_id):
         self.title = title
