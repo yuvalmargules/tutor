@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
-from wtforms.validators import DataRequired, Length, EqualTo
+from wtforms.validators import DataRequired, Length, EqualTo, URL
 
 
 class RegistrationForm(FlaskForm):
@@ -32,5 +32,7 @@ class AddCourse(FlaskForm):
 
 class resourceForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
-    content = TextAreaField('Content', validators=[DataRequired()])
+    content = TextAreaField('Description', validators=[DataRequired()])
+    link = TextAreaField('Link',
+                validators=[DataRequired(), URL(require_tld=True, message="Not a valid URL")])
     submit = SubmitField('Post')
