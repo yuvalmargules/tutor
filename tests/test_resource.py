@@ -15,14 +15,14 @@ def test_resource_create():
         resource = {
             'title': 'resource_name',
             'content': 'content',
-            'link': 'www.google.com',
+            'link': 'https://www.google.com',
             'submit': 'Post'
         }
         c.post('/resource/new?id=3000', data=resource, follow_redirects=True)
         test_resource = Resource.query.filter_by(title='resource_name').first()
         assert test_resource.title == 'resource_name'
         assert test_resource.content == 'content'
-        assert test_resource.link == 'www.google.com'
+        assert test_resource.link == 'https://www.google.com'
     db.session.delete(test_resource)
     db.session.delete(course_1)
     db.session.commit()
