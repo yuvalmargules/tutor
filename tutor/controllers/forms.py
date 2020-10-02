@@ -25,8 +25,8 @@ class LoginForm(FlaskForm):
 
 
 class AddCourse(FlaskForm):
-    title = StringField('Course Name', validators=[
-                        DataRequired(), Length(max=50)])
+    name = StringField('Course Name',
+                       validators=[DataRequired(), Length(max=50)])
     submit = SubmitField('Add Course')
 
 
