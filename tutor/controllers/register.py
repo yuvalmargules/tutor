@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for
 from .forms import RegistrationForm
 from ..models.users import Users
-from .. import db, bcrypt
+from .. import db
 
 
 def register():
