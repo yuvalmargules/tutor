@@ -1,5 +1,5 @@
-from tutor import app, db, bcrypt
-from tutor.routes import home, course
+from tutor import app, db
+from tutor.routes import home, course # noqa
 from tutor.models.users import Users
 
 
