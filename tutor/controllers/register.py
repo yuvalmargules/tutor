@@ -1,10 +1,14 @@
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, flash
 from .forms import RegistrationForm
 from ..models.users import Users
 from .. import db
+from flask_login import current_user
 
 
 def register():
+    if current_user.is_authenticated:
+        flash('You must logout before registering another user', 'danger')
+        return redirect(url_for('courses_route'))
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_pass = Users.hash_pass(form.password.data)
