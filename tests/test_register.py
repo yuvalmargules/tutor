@@ -16,8 +16,10 @@ def test_register_user():
             'confirm_password': '123',
             'submit': 'Sign Up'
         }
+        # Register new user
         c.post('/register', data=user, follow_redirects=True)
         test_user = Users.query.first()
+        # Test new user
         assert test_user.username == 'test'
         assert test_user.email == 'test@email.com'
         # Test password hash
@@ -25,5 +27,6 @@ def test_register_user():
         # Test trying to register an already registered username and email
         response = c.post('/register', data=user, follow_redirects=True)
         assert b'Username already registered' and b'Email already registered' in response.data
+    # Delete new user
     Users.query.delete()
     db.session.commit()
