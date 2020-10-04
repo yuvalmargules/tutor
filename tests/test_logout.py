@@ -1,5 +1,5 @@
-from tutor import app, db, bcrypt
-from tutor.routes import home, course
+from tutor import app, db
+from tutor.routes import home, course # noqa
 from tutor.models.users import Users
 
 
@@ -25,6 +25,8 @@ def test_logout():
             'password': '123',
             'submit': 'Login'
         }
+        c.post('/login', data=login_user, follow_redirects=True)
+        # Logout user
         response = c.get('/logout', follow_redirects=True)
         assert b'Tutor - Sharing Towards Excellence' in response.data
     Users.query.delete()
