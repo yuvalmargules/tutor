@@ -1,6 +1,5 @@
 from tutor.routes import home, course # noqa
 from functions import login_test_user, create_test_user
-from flask import current_app
 
 
 def test_logout(client):

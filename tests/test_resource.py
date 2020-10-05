@@ -1,6 +1,4 @@
 from tutor.routes import home, course, resources # noqa
-from tutor import db
-from tutor.models.course import Resource, Course
 from functions import create_test_course, search_resource_title
 
 

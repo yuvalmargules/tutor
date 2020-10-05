@@ -4,7 +4,6 @@ from tutor.models.users import Users
 from flask_login import login_user
 
 
-
 def create_test_user(username, email, password):
     user = Users(username=username, email=email, password=Users.hash_pass(password))
     db.session.add(user)
