@@ -1,7 +1,5 @@
-from tutor import db
 from tutor.routes import home, course # noqa
-from tutor.models.users import Users
-
+from functions import create_test_user
 
 def test_login(client):
     # Test login without register
@@ -13,19 +11,10 @@ def test_login(client):
     response = client.post('/login', data=login_user, follow_redirects=True)
     assert b'Login unsuccessful' in response.data
     # Create test user
-    register_user = {
-        'username': 'test',
-        'email': 'test@email.com',
-        'password': '123',
-        'confirm_password': '123',
-        'submit': 'Sign Up'
-    }
-    client.post('/register', data=register_user, follow_redirects=True)
+    create_test_user(username="test", email="test@email.com", password="123")
     # Test user login
     response = client.post('/login', data=login_user, follow_redirects=True)
     assert b'Welcome' in response.data
     # Test login after user already logged in
     response = client.post('/login', data=login_user, follow_redirects=True)
     assert b'You are already logged in' in response.data
-    Users.query.delete()
-    db.session.commit()
