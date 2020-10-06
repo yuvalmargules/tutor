@@ -1,5 +1,5 @@
 from tutor.routes import home, course # noqa
-from functions import search_course_name
+from course_functions import search_course_name
 
 
 def test_add_course(client):

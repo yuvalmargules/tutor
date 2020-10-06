@@ -1,6 +1,6 @@
 from tutor import bcrypt
 from tutor.routes import home, course # noqa
-from functions import search_user_name
+from user_functions import search_user_name
 
 
 def test_register_user(client):

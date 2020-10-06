@@ -1,5 +1,5 @@
 from tutor.routes import home, course # noqa
-from functions import create_test_user
+from user_functions import create_test_user
 
 
 def test_login(client):

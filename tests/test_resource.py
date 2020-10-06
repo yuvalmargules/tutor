@@ -1,5 +1,5 @@
 from tutor.routes import home, course, resources # noqa
-from functions import create_test_course, search_resource_title
+from course_functions import create_test_course, search_resource_title
 
 
 def test_resource_create(client):

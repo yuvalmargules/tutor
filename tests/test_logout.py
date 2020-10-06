@@ -1,5 +1,5 @@
 from tutor.routes import home, course # noqa
-from functions import register_and_login
+from user_functions import register_and_login
 
 
 def test_logout(client):
