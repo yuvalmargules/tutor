@@ -1,33 +1,13 @@
-from tutor import app, db
 from tutor.routes import home, course # noqa
-from tutor.models.users import Users
+from user_functions import register_and_login
 
 
-def test_logout():
-    app.config['WTF_CSRF_ENABLED'] = False
-    app.config['TESTING'] = True
-    with app.test_client() as c:
-        # Test logout without user logged in
-        response = c.get('/logout', follow_redirects=True)
-        assert b'Tutor - Sharing Towards Excellence' in response.data
-        # Create test user
-        register_user = {
-            'username': 'test',
-            'email': 'test@email.com',
-            'password': '123',
-            'confirm_password': '123',
-            'submit': 'Sign Up'
-        }
-        c.post('/register', data=register_user, follow_redirects=True)
-        # Login test user
-        login_user = {
-            'email': 'test@email.com',
-            'password': '123',
-            'submit': 'Login'
-        }
-        c.post('/login', data=login_user, follow_redirects=True)
-        # Logout user
-        response = c.get('/logout', follow_redirects=True)
-        assert b'Tutor - Sharing Towards Excellence' in response.data
-    Users.query.delete()
-    db.session.commit()
+def test_logout(client):
+    # Test logout without user logged in
+    response = client.get('/logout', follow_redirects=True)
+    assert b'Tutor - Sharing Towards Excellence' in response.data
+    # Register and login test user
+    register_and_login(client)
+    # Logout user
+    response = client.get('/logout', follow_redirects=True)
+    assert b'Goodbye' in response.data
